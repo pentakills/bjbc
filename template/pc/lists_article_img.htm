@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<title>{$eyou.field.seo_title}</title>
+		<meta name="description" content="{$eyou.field.seo_description}" />
+		<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+		{eyou:static file="skin/css/basic.css" /}
+		{eyou:static file="skin/css/common.css" /}
+		{eyou:static file="skin/css/global.css" /}
+		{eyou:static file="skin/css/widget.css" /}
+		{eyou:static file="skin/css/style.css" /}
+
+		<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.min1.js"></script>
+		<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/g.css">
+		<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/s.css">
+		<style>
+			.banners-pc {
+				clear: both;
+				height: 500px;
+			}
+
+			.banners-pc .frame {
+				height: 500px;
+				background: no-repeat center center;
+				background-size: cover;
+			}
+
+			.banners-mb {
+				display: none;
+				clear: both;
+				height: 700px;
+			}
+
+			.banners-mb div {
+				height: 100%;
+			}
+
+			.banners-mb .frame {
+				height: 100%;
+				background: no-repeat center center;
+				background-size: cover;
+			}
+
+			@media (max-width: 1024px) {
+				.banners-pc {
+					display: none;
+				}
+
+				.banners-mb {
+					display: block;
+				}
+			}
+
+			@media (max-width: 1024px) {
+				.c_nav .list>li {
+					width: 20%;
+				}
+			}
+
+			@media (max-width: 750px) {
+				.c_nav .list>li {
+					width: 33.33%;
+				}
+			}
+
+			.product {
+				margin-top: 40px;
+			}
+		</style>
+		<script>
+			$(function () {
+		});
+	</script>
+		<link rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/freedom.css" />
+		<script>
+			(function() {
+				var l = function() {
+					var l1 = function() {
+						var sg = document.createElement('SCRIPT');
+						sg.setAttribute('src', '{eyou:global name='
+							web_templets_pc ' /}/skin/js/freedom.js?v1.18.12.14');
+						(document.head || document.getElementsByTagName('head')[0]).appendChild(sg);
+						sg.onload = function() {
+							_g.take($(document));
+						};
+					};
+					if (!window.jQuery) {
+						var sj = document.createElement('SCRIPT');
+						sj.setAttribute('src', '{eyou:global name='
+							web_templets_pc ' /}/skin/js/jquery-1.11.1.min.js');
+						(document.head || document.getElementsByTagName('head')[0]).appendChild(sj);
+						sj.onload = l1;
+					} else l1();
+				};
+				window.addEventListener ? window.addEventListener('load', l) : window.attachEvent('onload', l);
+			})();
+		</script>
+	</head>
+	<body>
+		{eyou:include file="header.htm" /}
+		<section class="w-container bannerBox ">
+			<div class="banner" style="height: auto;"> <img src="{eyou:global name='web_attr_11' /}" alt="banner" title="" style="" />
+			</div>
+		</section>
+		<!--主体内容-->
+		<div class="pages">
+			<div class="g_cw">
+				<p class="p1"><a href="{eyou:global name='web_cmsurl' /}"><span class="ico"><img src="{eyou:global name='web_templets_pc' /}/skin/images/ico_home.svg" /></span></a>
+					{eyou:position style="crumb" /}</p>
+			</div>
+		</div>
+		<div class="c_nav">
+			<div class="g_cwon">
+				<ul class="list">
+					{eyou:channel type='first' id='field' row='20' currentstyle='on'}
+					<li><a href="{$field.typeurl}" class="box {$field.currentstyle}">{$field.typename}</a></li>
+					{/eyou:channel}
+				</ul>
+			</div>
+		</div>
+		<div class="product">
+			<div class="g_cw">
+				<div class="offset">
+					<ul class="list">
+						{eyou:list titlelen='40' pagesize='12'}
+						<li> <a href="{$field.arcurl}" class="box" target="_blank">
+								<p class="pic"><img src="{$field.litpic}" alt="{$field.title}" width="267" height="255" /></p>
+								<p class="p1">{$field.title}</p>
+								<!--<p class="p2">{$field.typename}</p>-->
+							</a> </li>
+						{/eyou:list}
+					</ul>
+				</div>
+				<!-- <div class="g_page" n="_pi" p="1"   style="margin-bottom:80px;">
+          <ul>
+       {eyou:pagelist listitem='index,pre,pageno,next,end' listsize='2' /}
+      </ul>
+        </div> -->
+				<div class="next1"> {eyou:pagelist listitem='index,pre,pageno,next,end' listsize='2' /}</div>
+			</div>
+		</div>
+		<!--主体内容 end-->
+		{eyou:include file="footer.htm" /}
+	</body>
+</html>

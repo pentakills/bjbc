@@ -1,0 +1,21 @@
+
+
+
+/*主体*/
+.title{ text-align:center;font-size:30px; font-weight: bold;}
+.title-txt{ text-align: center; font-size:18px; color:#999;margin-top:10px; text-transform: uppercase;}
+
+
+.sum2{width:1200px;margin:50px auto;}
+.sum2-main{position: relative; margin-top:35px;padding:10px 0;}
+#CSSBox{float:left; }
+#CSSBox ul{}
+#CSSBox ul li{ float:left;margin:15px;width:273px;box-shadow: 0px 0px 6px rgba(0, 0, 0, .3);}
+#CSSBox ul li img{width:273px;height:382px;}
+#LeftButton,#RightButton{ position: absolute; top:190px;width:46px; height:36px;cursor:pointer; z-index:999;}
+#LeftButton{background:url(../images/btn-left.png);left:-18px;}
+#RightButton{background:url(../images/btn-right.png);right:-18px;}
+#LeftButton:hover{background:url(../images/btn-lefthover.png);}
+#RightButton:hover{background:url(../images/btn-righthover.png);}
+
+
